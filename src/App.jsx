@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import FoodDetail from './pages/FoodDetail';
+import Cart from './pages/Cart';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home setCartCount={setCartCount} />} />
           <Route path="/detail/:id" element={<FoodDetail setCartCount={setCartCount} />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </div>
